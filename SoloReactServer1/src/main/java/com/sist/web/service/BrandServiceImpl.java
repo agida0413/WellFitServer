@@ -78,12 +78,12 @@ public class BrandServiceImpl implements BrandService {
 		
 		
 		
-		map.put("vo", vo);
-		map.put("curpage", page);
-		map.put("totalpage", totalpage);
-		map.put("list", list);
-		map.put("startpage", startpage);
-		map.put("endpage",endpage );
+		map.put("bcvo", vo);
+		map.put("bccurpage", page);
+		map.put("bctotalpage", totalpage);
+		map.put("bclist", list);
+		map.put("bcstartpage", startpage);
+		map.put("bcendpage",endpage );
 		return map;
 	}
 }

@@ -12,6 +12,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sist.web.service.ClothService;
+import com.sist.web.service.ReplyService;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,6 +23,8 @@ public class ClothController {
 
 	@Autowired
 	private ClothService service;
+	@Autowired
+	private ReplyService rservice;
 	@GetMapping("/cloth/list")
 	public Map clothList(int page,String ss,String category,String sex) {
 		return service.clothList(page, ss, category, sex);
@@ -33,6 +36,12 @@ public class ClothController {
 		System.out.println("실행");
 		
 		return service.clothDetail(pno, response,request);
+	}
+	
+	@GetMapping("/cloth/replyList")
+	public Map replyNormalList(int page,int pno) {
+		System.out.println("실행");
+		return rservice.replyNormalList(pno, page);
 	}
 	
 	
