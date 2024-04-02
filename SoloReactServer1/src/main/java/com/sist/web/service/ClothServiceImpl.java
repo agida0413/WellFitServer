@@ -54,11 +54,11 @@ private ClothDAO dao;
 		List<String> brandList=dao.brandList();
 		map.put("cateList", cateList);
 		map.put("brandList", brandList);
-		map.put("curpage", page);
-		map.put("totalpage", totalpage);
-		map.put("list", list);
-		map.put("startpage", startpage);
-		map.put("endpage",endpage );
+		map.put("cTcurpage", page);
+		map.put("cTtotalpage", totalpage);
+		map.put("cTlist", list);
+		map.put("cTstartpage", startpage);
+		map.put("cTendpage",endpage );
 		
 		return map;
 	}
